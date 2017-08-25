@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>Weather Results</h3>
+  <div *ngIf="weatherData.length > 0" class="col-xs-6">    
+    <div *ngFor="let w of weatherData">
+      <div class="media">
+        <div class="media-left">
+          <img src={{w.imageUrl}} class="media-object" style="width:60px" alt="">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{city}}</h4>
+          <p>Main: {{w.main}}</p>
+          <p>Description: {{w.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
